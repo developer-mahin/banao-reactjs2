@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+.text-blue {
+  color: #2f6ce5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 1260px;
+  padding: 0px 10px;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.close_button {
+  cursor: pointer;
+}
+
+.btn-blue {
+  background: #2f6ce5;
+  color: #fff;
+}
+
+.cursor-pinter:hover {
+  cursor: pointer;
+}
+
+textarea.post-form::placeholder {
+  color: rgb(141, 141, 141);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.post-form{
+  outline: none;
+  font-size: 18px;
+}
+
+.eye-button {
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .ReactModal__Content.ReactModal__Content--after-open {
+    width: 90%;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width: 560px) {
+  .ReactModal__Content.ReactModal__Content--after-open {
+    width: 100%;
   }
 }
