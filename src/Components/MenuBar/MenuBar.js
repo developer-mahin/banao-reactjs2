@@ -10,6 +10,7 @@ import PostModal from '../PostModal/PostModal';
 
 const MenuBar = () => {
     const [postModalIsOpen, setPostModalIsOpen] = useState(false);
+    const [changePage, setChangePage] = useState("All Posts")
     function openPostModal() {
         setPostModalIsOpen(true);
     }
@@ -50,14 +51,24 @@ const MenuBar = () => {
 
 
     return (
-        <div className='mt-5 mb-3 container row'>
+        <div className='mt-5 mb-3 container-two mx-auto row border-bottom pb-2'>
             <div className='d-flex align-items-center gap-2 col-7 col-md-7'>
-                <Link className='text-decoration-none text-black fw-semibold mx-2' to="/">All Posts(32)</Link>
+                <Link
+                    onClick={(e) => setChangePage(e.target.innerText)}
+                    className={`${changePage === "All Posts" ? "custom-border" : ""} text-decoration-none text-black fw-semibold`} to="/">All Posts</Link> <span>(32)</span>
                 <div className='d-none d-md-block'>
-                    <Link className='text-decoration-none text-secondary mx-2' to="/">Article</Link>
-                    <Link className='text-decoration-none text-secondary mx-2' to="/">Event</Link>
-                    <Link className='text-decoration-none text-secondary mx-2' to="/">Education</Link>
-                    <Link className='text-decoration-none text-secondary mx-2' to="/">Job</Link>
+                    <Link
+                        onClick={(e) => setChangePage(e.target.innerText)}
+                        className='text-decoration-none text-secondary mx-2' to="/">Article</Link>
+                    <Link
+                        onClick={(e) => setChangePage(e.target.innerText)}
+                        className='text-decoration-none text-secondary mx-2' to="/">Event</Link>
+                    <Link
+                        onClick={(e) => setChangePage(e.target.innerText)}
+                        className='text-decoration-none text-secondary mx-2' to="/">Education</Link>
+                    <Link
+                        onClick={(e) => setChangePage(e.target.innerText)}
+                        className='text-decoration-none text-secondary mx-2' to="/">Job</Link>
                 </div>
             </div>
             <div className='col-5 col-md-5 d-flex align-items-center justify-content-end gap-2'>

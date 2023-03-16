@@ -46,7 +46,7 @@ const Navbar = () => {
                             <div>
                                 <div className='d-flex align-items-center justify-content-center gap-2'>
                                     <div>
-                                        <img width={"40px"} src={user?.uid ? user?.photoURL : "https://png.pngtree.com/png-vector/20220817/ourmid/pngtree-cartoon-man-avatar-vector-ilustration-png-image_6111064.png"} className="rounded-pill object-fit-cover" alt="" />
+                                        <img width={50} height={50} src={user?.uid ? user?.photoURL : "https://png.pngtree.com/png-vector/20220817/ourmid/pngtree-cartoon-man-avatar-vector-ilustration-png-image_6111064.png"} className="rounded-pill object-fit-cover" alt="" />
                                     </div>
                                     <div className='mt-3'>
                                         <p className='fw-semibold'>{user?.displayName}</p>

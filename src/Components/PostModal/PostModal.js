@@ -102,7 +102,7 @@ const PostModal = ({ postModalIsOpen, closeModal, customStyles }) => {
                     <>
                         <button
                             onClick={() => setIsPickerVisible(!isPickerVisible)}
-                            className='bg-transparent'
+                            className='bg-transparent btn'
                         >
                             <BsEmojiSmile className='text-white fs-3' />
                         </button>
@@ -131,7 +131,7 @@ const PostModal = ({ postModalIsOpen, closeModal, customStyles }) => {
                             }) => (
                                 <div className="upload__image-wrapper">
                                     <button
-                                        className='bg-transparent'
+                                        className='bg-transparent btn'
                                         style={isDragging ? { color: 'red' } : undefined}
                                         onClick={onImageUpload}
                                         {...dragProps}
