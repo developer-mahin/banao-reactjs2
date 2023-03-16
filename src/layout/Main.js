@@ -13,7 +13,7 @@ const Main = () => {
                 <div className='col-md-8 px-lg-0 px-2'>
                     <Outlet></Outlet>
                 </div>
-                <div className='col-md-4'>
+                <div className='col-md-4 d-lg-block d-none'>
                     <RightSideBar></RightSideBar>
                 </div>
             </div>
