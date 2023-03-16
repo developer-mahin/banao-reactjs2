@@ -55,7 +55,7 @@ const MenuBar = () => {
             <div className='d-flex align-items-center gap-2 col-7 col-md-7 px-lg-0 px-2'>
                 <Link
                     onClick={(e) => setChangePage(e.target.innerText)}
-                    className={`text-decoration-none text-black fw-semibold`} to="/">All Posts</Link> <span>(32)</span>
+                    className={`text-decoration-none text-black fw-semibold`} to="/">All Posts</Link> <span className='fw-semibold'>(32)</span>
                 <div className='d-none d-md-block'>
                     <Link
                         onClick={(e) => setChangePage(e.target.innerText)}

@@ -5,6 +5,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import ModalBody from '../Modal/ModalBody';
 import { AUTH_CONTEXT } from '../../Context/AuthProvider';
 import { toast } from 'react-hot-toast';
+import {IoMdArrowDropdown} from "react-icons/io"
 
 
 const Navbar = () => {
@@ -13,17 +14,8 @@ const Navbar = () => {
         setIsOpen(true);
     }
 
-    const { user, logOut } = useContext(AUTH_CONTEXT)
+    const { user } = useContext(AUTH_CONTEXT)
 
-    const handleLogOut = () => {
-        logOut()
-            .then(() => {
-                toast.success("User successfully loged out")
-            })
-            .catch(error => {
-                toast.error(error.message)
-            })
-    }
 
 
     return (
@@ -49,20 +41,7 @@ const Navbar = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                <div className="dropdown">
-                                    <button className="dropdown-toggle border-0 bg-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    </button>
-                                    <ul className="dropdown-menu">
-                                        <li className=''>
-                                            <div className='d-flex justify-content-center align-items-center'>
-                                                <button onClick={handleLogOut} className="btn btn-blue dropdown-item w-75 rounded">Logout</button>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
+                            <IoMdArrowDropdown/>
                         </div>
                     </> : <>
                         <div className='d-flex align-items-center justify-content-end text-end col'>
