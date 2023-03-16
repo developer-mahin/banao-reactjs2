@@ -43,14 +43,66 @@ textarea.post-form::placeholder {
   width: 1024px;
 }
 
-a.custom-border:before {
+.custom-border:before {
   position: absolute;
   content: "";
-  width: 130px;
+  width: 100px;
   height: 1px;
   background: black;
-  bottom: 62px;
-  left: 236px;
+}
+
+.w-10 {
+  width: 100px;
+}
+
+.text-sm{
+  font-size: 13px;
+}
+
+.text-xs{
+  font-size: 12px;
+}
+
+.text-lg {
+  font-size: 22px;
+}
+
+.text-md {
+  font-size: 18px;
+}
+
+.text-base{
+  font-size: 16px;
+}
+
+.text-green {
+  color: #02b875;
+}
+
+.icon-size{
+  font-size: 16px;
+}
+
+.navbar{
+  height: 85px;
+}
+
+@media only screen and (max-width: 1920px) {
+  .custom-border:before {
+    bottom: 98px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .custom-border:before {
+    bottom: 42px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .custom-border:before {
+    bottom: 5px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -60,6 +112,29 @@ a.custom-border:before {
   .container-two {
     width: 100%;
   }
+
+  .text-md{
+    font-size: 13px;
+  }
+
+  .text-lg{
+    font-size: 16px;
+  }
+
+  .text-base{
+    font-size: 14px;
+  }
+
+  .icon-size{
+    font-size: 18px;
+  }
+
+  .custom-border:before {
+    width: 0px;
+    height: 0px;
+  }
+
+
 }
 @media only screen and (max-width: 560px) {
   .ReactModal__Content.ReactModal__Content--after-open {

@@ -51,11 +51,11 @@ const MenuBar = () => {
 
 
     return (
-        <div className='mt-5 mb-3 container-two mx-auto row border-bottom pb-2'>
-            <div className='d-flex align-items-center gap-2 col-7 col-md-7'>
+        <div className={`${changePage === "All Posts" ? "custom-border" : ""} mt-5 mb-3 container-two mx-auto row custom-border border-bottom pb-2`}>
+            <div className='d-flex align-items-center gap-2 col-7 col-md-7 px-lg-0 px-2'>
                 <Link
                     onClick={(e) => setChangePage(e.target.innerText)}
-                    className={`${changePage === "All Posts" ? "custom-border" : ""} text-decoration-none text-black fw-semibold`} to="/">All Posts</Link> <span>(32)</span>
+                    className={`text-decoration-none text-black fw-semibold`} to="/">All Posts</Link> <span>(32)</span>
                 <div className='d-none d-md-block'>
                     <Link
                         onClick={(e) => setChangePage(e.target.innerText)}

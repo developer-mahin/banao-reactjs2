@@ -10,7 +10,7 @@ const Main = () => {
             <Header></Header>
             <MenuBar></MenuBar>
             <div className='row container-two mx-auto'>
-                <div className='col-md-8'>
+                <div className='col-md-8 px-lg-0 px-2'>
                     <Outlet></Outlet>
                 </div>
                 <div className='col-md-4'>

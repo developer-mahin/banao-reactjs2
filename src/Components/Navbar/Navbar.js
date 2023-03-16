@@ -27,7 +27,7 @@ const Navbar = () => {
 
 
     return (
-        <div className='d-none d-md-block container px-2'>
+        <div className='d-none d-md-block container px-2 navbar'>
             <div className='py-3 row border-bottom'>
                 <div className='col'>
                     <img className='pt-2' src={logo} alt="" />
@@ -36,13 +36,9 @@ const Navbar = () => {
                     <AiOutlineSearch className='position-absolute fs-5 text-gray mt-2 ms-3' />
                     <input type="text" name="search" placeholder='Search favorite groups in ATG' id="" className='form-control rounded-pill px-5 bg-light' />
                 </div>
-
-
                 {
                     user?.uid ? <>
-
                         <div className='d-flex justify-content-end align-items-center text-end col'>
-
                             <div>
                                 <div className='d-flex align-items-center justify-content-center gap-2'>
                                     <div>
@@ -53,7 +49,6 @@ const Navbar = () => {
                                     </div>
                                 </div>
                             </div>
-
                             <div>
                                 <div className="dropdown">
                                     <button className="dropdown-toggle border-0 bg-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -69,7 +64,6 @@ const Navbar = () => {
                             </div>
 
                         </div>
-
                     </> : <>
                         <div className='d-flex align-items-center justify-content-end text-end col'>
                             <div className='mt-2'>
@@ -92,7 +86,6 @@ const Navbar = () => {
                         </div>
                     </>
                 }
-
             </div>
         </div >
     );

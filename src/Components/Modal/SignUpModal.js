@@ -16,7 +16,7 @@ const SignUpModal = ({ isOpen, modalIsOpen, customStyles, closeModal, afterOpenM
 
     const [confirmPassword, setConfirmPassword] = useState("")
     const [loading, setLoading] = useState(false)
-    const { createUser, updateUserName } = useContext(AUTH_CONTEXT)
+    const { createUser, updateUserName, googleSignIn, facebookSignIn } = useContext(AUTH_CONTEXT)
 
     const handleSignUp = (e) => {
         setLoading(true)
@@ -61,9 +61,30 @@ const SignUpModal = ({ isOpen, modalIsOpen, customStyles, closeModal, afterOpenM
                         setLoading(false)
                     })
             })
+    }
 
 
 
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                const user = result.user
+                toast.success("successfully user login")
+            })
+            .catch(error => {
+                toast.error(error.message)
+            })
+    }
+
+    const handleFacebookSignIn = () => {
+        facebookSignIn()
+            .then(result => {
+                const user = result.user
+                toast.success("Successfully user Login")
+            })
+            .catch(error => {
+                toast.error(error.message)
+            })
     }
 
     return (
@@ -96,7 +117,9 @@ const SignUpModal = ({ isOpen, modalIsOpen, customStyles, closeModal, afterOpenM
                     </div>
                     <div className='row'>
                         <div className='col'>
-                            <form onSubmit={handleSignUp}>
+                            <form
+                                onSubmit={handleSignUp}
+                            >
                                 <div className='d-flex justify-content-between align-items-center pb-2'>
                                     <input
                                         type="text"
@@ -189,11 +212,15 @@ const SignUpModal = ({ isOpen, modalIsOpen, customStyles, closeModal, afterOpenM
                             </form>
                             <div className='mt-4'>
                                 <div className=''>
-                                    <button className='w-100 d-flex justify-content-center align-items-center gap-1 border btn py-2 px-4 my-2 fw-medium'>
+                                    <button
+                                        onClick={handleFacebookSignIn}
+                                        className='w-100 d-flex justify-content-center align-items-center gap-1 border btn py-2 px-4 my-2 fw-medium'>
                                         <img width={"25px"} src=" https://i.ibb.co/9Y0S2nP/facebook.png" alt="" />
                                         <span>Sign up with Facebook</span>
                                     </button>
-                                    <button className='w-100 d-flex justify-content-center align-items-center gap-1 border btn py-2 px-4 my-2 fw-medium'>
+                                    <button
+                                        onClick={handleGoogleSignIn}
+                                        className='w-100 d-flex justify-content-center align-items-center gap-1 border btn py-2 px-4 my-2 fw-medium'>
                                         <img width={"25px"} src="https://i.ibb.co/LCqGCxS/google.png" alt="" />
                                         <span>Sign up with Google</span>
                                     </button>
