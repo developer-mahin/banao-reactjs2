@@ -9,7 +9,7 @@ const Education = () => {
     return (
         <div className='border rounded'>
             <div>
-                <img src="https://i.ibb.co/YNBsgw7/Rectangle-5-2.jpg" className='img-fluid' alt="" />
+                <img src="https://i.ibb.co/YNBsgw7/Rectangle-5-2.jpg" className='img-fluid w-100' alt="" />
             </div>
             <div className='px-3'>
                 <p className='fw-medium mt-3 text-base'>🔬️ Education</p>

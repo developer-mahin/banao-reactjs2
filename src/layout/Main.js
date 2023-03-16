@@ -10,10 +10,10 @@ const Main = () => {
             <Header></Header>
             <MenuBar></MenuBar>
             <div className='row container-two mx-auto'>
-                <div className='col-md-8 px-lg-0 px-2'>
+                <div className='col-lg-8 px-lg-0 px-2'>
                     <Outlet></Outlet>
                 </div>
-                <div className='col-md-4 d-lg-block d-none'>
+                <div className='col-lg-4 d-lg-block d-none'>
                     <RightSideBar></RightSideBar>
                 </div>
             </div>
